@@ -1,8 +1,8 @@
-Docker PSP CPS2 PSP.
+Docker PSP CPS2 PSP fat version
 
 Unfortunately you cannot run ROMCNV on mac without a VM, but docker is makes it easier and much more light weight.
 
-you will need git, and docker preinstalled. Original built for MVS system, moded for CPS2
+you will need git, and docker preinstalled.
 
 
 1. Open a terminal window
@@ -15,8 +15,10 @@ Create file called ‘capcom’, paste all roms that you will be creating caches
   Back to terminal
 
 3. git clone https://github.com/phoe-nix/NJEMU.git
+
 (Launching container)
 4. docker run --rm -it -v ~/NJEMU/romcnv:/root/romcnv -v ~/capcom:/root/capcom -w /root/romcnv debian:jessie bash
+
 (Needed windows libraries)
 5. apt-get update && apt-get install -y --no-install-recommends make automake gcc build-essential g++ cpp libc6-dev man-db autoconf pkg-config
 
@@ -32,4 +34,6 @@ Copy and paste cache files in to your PSP/GAME/CPS2/cache Directory
 Copy and paste rom files in to your PSP/GAME/CPS2/roms
 
 You are finished. 
+
+Original by, altered for CPS2 System https://gist.github.com/aymerick/a47c2d04ebf319bcf3ba 
 
